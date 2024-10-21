@@ -3,7 +3,8 @@ a = []
 index = 0
 while index < len(my_list):
     if my_list[index] < 0:
-        break
+         break
     a.append(my_list[index])
     index += 1
-print(a)
+for i in a:
+    print(i)
