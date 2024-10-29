@@ -30,6 +30,6 @@ def is_contains(string, list_to_search):
 print(string_info('Capybara'))
 print(string_info('Malina'))
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
-print(is_contains('cycle', ['recycling', 'Mashinist', 'cyclic']))
+print(is_contains('cycle', ['recycling', 'Mashinst', 'cyclic']))
 
 print(calls)
