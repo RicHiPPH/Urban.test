@@ -1,18 +1,19 @@
 
-#def print_params(a = 1, b = "str",c = True):
-#    print(a,b,c)
-#print_params()
+def print_params(a = 1, b = "str",c = True):
+    print(a,b,c)
+print_params()
 
 
-#def print_params(*args):
-#    print()
-#print_params()
+def print_params(*args):
+    print(*args)
+print_params(1,2,3.5)
+print_params()   #Без аргументов
 
 
-#def print_params(*args):
-#    print()
-#print_params(b=25)
-#print_params(c=[1,2,3])       !!Error!!
+def print_params(b = 25,c = [1,2,3]):
+    print(b,c)
+print_params()
+print_params()
 
 
 def print_params(a,b,c):
