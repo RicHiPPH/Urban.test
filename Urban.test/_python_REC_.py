@@ -134,3 +134,39 @@ for line in ff.readlines():
     print(line, end='')
 ff.close()
 # будет целый урок по работе с файлами, пока просто ознакомились
+
+
+#Первая - максимум в списке, то есть функцию, которая будет находить максимальный элемент в списке;
+#Вторая будет считать количество чётных чисел в переданном списке;
+#Третья функция будет возвращать нам уникальный список.
+
+
+
+def find_max(list_):          # Максимально число в списке
+    max_ = list_[0]
+    for i in list_:
+        if i > max_:
+            max_ = i
+    return max_
+print(find_max([1, 54,-1,2.2]))
+
+
+
+def count_even(list_):             #Четное число
+    counter = 0
+    for i in list_:
+        if i == 0:
+            continue
+        if i % 2 == 0:
+            counter += 1
+    return counter
+print(count_even([2,3,4,5213,23,5,0]))
+
+
+def unique(list_):                        #Уникальный список
+    new_list = []
+    for i in list_:
+        if i not in new_list:
+            new_list.append(i)
+    return new_list
+print(unique([1,2,3,2,21,12,3,2,1,2,3]))
