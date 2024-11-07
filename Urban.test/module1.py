@@ -1,9 +1,5 @@
-from module2 import *
+from module2 import say_hi as sh
 
 
-print("Привет я из модуля 1")
-
-
-sey_hi()
-print(a)
-print(b)
+sh()
+b = 10
