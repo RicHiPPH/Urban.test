@@ -1,5 +1,5 @@
 class Human:
-    def __init__(self,name,age):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
         self.say_info()
@@ -11,9 +11,29 @@ class Human:
         self.age += 1
         print(f"У меня день рождения, мне теперь {self.age}")
 
+    def __str__(self):
+        return f"{self.name}"
 
-den = Human("Den",12)
-max = Human("Max",22)
-max.birthday()
+    def __len__(self):
+        return self.age
+
+    def __lt__(self, other):
+        return self.age < other.age
+
+    def __gt__(self, other):
+        return self.age > other.age
+
+    def __eq__(self, other):
+        return self.name == other.name and self.age == other.age
+
+    def __bool__(self):
+        return bool(self.age)
+
+    def __del__(self):
+        print(f"{self.name} Ушел")
 
 
+den = Human("Den", 22)
+max = Human("Max", 23)
+a = 6
+print(max)
