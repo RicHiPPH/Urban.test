@@ -1,7 +1,7 @@
 class House:
     def __init__(self, name, number_of_floors):
         self.name = name
-        self.number_of_floors = number_of_floors
+        self.number_of_floors = int(number_of_floors)
 
     def go_to(self, new_floor):
         self.new_floor = int(new_floor)
@@ -19,26 +19,47 @@ class House:
         return 'Название: {0}, кол-во этажей: {1}'.format(self.name, self.number_of_floors)
 
     def __eq__(self, other):
-        return self.number_of_floors == other.number_of_floors
+        if isinstance(other,House):
+            return self.number_of_floors == other.number_of_floors
+        else:
+            print('Ошибка')
 
     def __lt__(self, other):
-        return self.number_of_floors < other.number_of_floors
+        if isinstance(other, House):
+            return self.number_of_floors < other.number_of_floors
+        else:
+            print('Ошибка')
 
     def __le__(self, other):
-        return self.number_of_floors <= other.number_of_floors
+        if isinstance(other, House):
+            return self.number_of_floors <= other.number_of_floors
+        else:
+            print('Ошибка')
 
     def __gt__(self, other):
-        return self.number_of_floors > other.number_of_floors
+        if isinstance(other, House):
+            return self.number_of_floors > other.number_of_floors
+        else:
+            print('Ошибка')
 
     def __ge__(self, other):
-        return self.number_of_floors >= other.number_of_floors
+        if isinstance(other, House):
+            return self.number_of_floors >= other.number_of_floors
+        else:
+            print('Ошибка')
 
     def __ne__(self, other):
-        return self.number_of_floors != other.number_of_floors
+        if isinstance(other, House):
+            return self.number_of_floors != other.number_of_floors
+        else:
+            print('Ошибка')
 
     def __add__(self, other):
-        self.number_of_floors += other
-        return self
+        if isinstance(other,int):
+            self.number_of_floors += other
+            return self
+        else:
+            print('Ошибка')
 
     def __radd__(self, other):
         return self.__add__(other)
