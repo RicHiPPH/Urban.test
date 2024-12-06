@@ -1,2 +1,2 @@
-Hello worldHello world2
-Hello world2
+Привет, я новый текст
+Вторая строка нового текста
